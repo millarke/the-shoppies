@@ -37,7 +37,7 @@ Nominating a movie adds its poster to the top of the page 🎥
 - Not giving up when the going got tough, there was a lot I didn't know that I didn't know!
 - Styling it myself without the help of a framework
 - Using debouncing
-- Even though I didn't quite finish, I'm proud of what I was able to accomplish in a day's time
+- Even though I didn't quite finish everything that I wanted to, I'm proud of what I was able to accomplish in a day's time
 
 ### What I Learned
 - Following a tutorial a couple weeks ago won't necessarily help when doing it from scratch on your own

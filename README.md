@@ -54,7 +54,6 @@ Nominating a movie adds its poster to the top of the page 🎥
 
 ### Known Issues
 - Nominate button does not disable, allowing for the same movie to be nominated more than once
-- There is no cap on nominations at the moment, user can nominate as many as they wish
 - No backend to use to hide the OMDB API key (visible in network requests when deployed, but not visible in the github repo) 
 - The nominate button is ugly and poorly placed (I know)
 

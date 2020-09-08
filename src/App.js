@@ -29,6 +29,11 @@ function App() {
     setNomination(noms)
   }
 
+  const isMovieNommed = function(nomId) {
+    const nom = nominations.filter(nom => nom.id === nomId)
+    return nom.length > 0
+  }
+
   useEffect(() => {
     // axios.get(`http://www.omdbapi.com/?s=${term}&apikey=${process.env.OMDB_API_KEY}&type=movie`)
     axios.get(`http://www.omdbapi.com/?s=${term}&apikey=${process.env.OMDB_API_KEY}&type=movie`)
@@ -48,7 +53,7 @@ function App() {
       <NominationList nominationRemove={nominationRemove} nominations={nominations} />
       <SearchBar onSearch={term => setTerm(term)} />
       {console.log(results)}
-      <SearchResultList results={results} nominationHandler={nominationHandler} nominations={nominations} ></SearchResultList>
+      <SearchResultList results={results} isMovieNommed={isMovieNommed} nominationHandler={nominationHandler} nominations={nominations} ></SearchResultList>
     </div>
   );
 }

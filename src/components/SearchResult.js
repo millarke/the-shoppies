@@ -80,6 +80,7 @@ export default function Movie(props) {
               id: props.id
             })
           }}
+          disabled={props.isMovieNommed(props.id)}
           // disabled={!idCheck}>
           >
             nominate

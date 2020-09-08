@@ -53,6 +53,7 @@ Nominating a movie adds its poster to the top of the page 🎥
 - Used [OMDb API](http://www.omdbapi.com/)
 
 ### Known Issues
+- Banner doesn't pop up when 5 nominations are hit
 - No backend to use to hide the OMDB API key (visible in network requests when deployed, but not visible in the github repo) 
 - Button styling is poor, poor placement as well
 - nominations container formats poorly when wide enough

@@ -24,6 +24,11 @@ function App() {
     }
   }
 
+  const nominationRemove = function(nomId) {
+    const noms = nominations.filter(nom => nom.id !== nomId)
+    setNomination(noms)
+  }
+
   useEffect(() => {
     // axios.get(`http://www.omdbapi.com/?s=${term}&apikey=${process.env.OMDB_API_KEY}&type=movie`)
     axios.get(`http://www.omdbapi.com/?s=${term}&apikey=${process.env.OMDB_API_KEY}&type=movie`)
@@ -40,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <NominationList nominations={nominations} />
+      <NominationList nominationRemove={nominationRemove} nominations={nominations} />
       <SearchBar onSearch={term => setTerm(term)} />
       {console.log(results)}
       <SearchResultList results={results} nominationHandler={nominationHandler} nominations={nominations} ></SearchResultList>

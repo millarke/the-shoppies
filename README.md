@@ -2,6 +2,10 @@
 
 This app is to accompany my Winter 2021 Application for Shopify!
 
+Please take a look at my [submission](https://the-shoppies-winter-2021.netlify.app) :)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

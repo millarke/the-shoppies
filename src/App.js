@@ -37,6 +37,7 @@ function App() {
   }
 
   useEffect(() => {
+    // axios.get(`http://www.omdbapi.com/?s=${term}&apikey=${process.env.OMDB_API_KEY}&type=movie`)
     axios.get(`http://www.omdbapi.com/?s=${term}&apikey=${process.env.OMDB_API_KEY}&type=movie`)
       .then(function(response) {
         if (response.data.Response === 'True') {

@@ -5,7 +5,11 @@ import SearchResult from "./SearchResult";
 export default function Results(props) {
   const { results } = props;
 
-  return results.map(movie => {
-    return <SearchResult title={movie.title} year={movie.year} poster={movie.poster} />;
-  });
+  if (results !== 0) {
+    return results.map(movie => {
+      return <SearchResult title={movie.Title} year={movie.Year} poster={movie.Poster} {...movie}/>;
+    });
+  } else {
+    return <div></div>;
+  }
 }

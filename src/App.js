@@ -8,21 +8,7 @@ import NavBar from './components/NavBar';
 
 require('dotenv').config({ debug: process.env.DEBUG });
 
-// const fakeResults = [
-//   {title: 'Harry Potter', year: 2001, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Pingu', year: 2008, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Lordo Rings', year: 2001, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Frozen', year: 2012, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Scoobs', year: 2020, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' }
-// ]
-
-// const fakeNominations = [
-//   {title: 'Harry Potter', year: 2001, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Pingu', year: 2008, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Lordo Rings', year: 2001, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Frozen', year: 2012, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
-//   {title: 'Scoobs', year: 2020, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' }
-// ]
+const max_noms = 5;
 
 function App() {
   
@@ -33,7 +19,9 @@ function App() {
   const [nominations, setNomination] = useState([]);
 
   const nominationHandler = function(newNom) {
-    setNomination([...nominations, newNom])
+    if (nominations.length < max_noms) {
+      setNomination([...nominations, newNom])
+    }
   }
 
   useEffect(() => {

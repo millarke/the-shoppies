@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Movie(props) {
 
-  const idCheck = function() {
-    for (let nomination of props.nominations) {
-      if (props.id === nomination.id) {
-        return true
-      }
-    }
-    return false
-  }
+  // const idCheck = function() {
+  //   for (let nomination of props.nominations) {
+  //     if (props.nomination.id === nomination.id) {
+  //       return true
+  //     }
+  //   }
+  //   return false
+  // }
 
   // const activeButton = function() {
   //   console.log('idCheck', idCheck)
@@ -61,7 +61,8 @@ export default function Movie(props) {
               id: props.id
             })
           }}
-          disabled={idCheck}>
+          // disabled={!idCheck}>
+          >
             nominate
         </button>
       </div>

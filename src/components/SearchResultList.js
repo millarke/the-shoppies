@@ -7,7 +7,7 @@ export default function Results(props) {
 
   if (results !== 0) {
     return results.map(movie => {
-      return <SearchResult title={movie.Title} year={movie.Year} poster={movie.Poster} {...movie}/>;
+      return <SearchResult nominationHandler={props.nominationHandler} title={movie.Title} year={movie.Year} poster={movie.Poster} id={movie.imdbID} nominations={props.nominations} {...movie}/>;
     });
   } else {
     return <div></div>;

@@ -16,12 +16,25 @@ require('dotenv').config({ debug: process.env.DEBUG });
 //   {title: 'Scoobs', year: 2020, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' }
 // ]
 
+// const fakeNominations = [
+//   {title: 'Harry Potter', year: 2001, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
+//   {title: 'Pingu', year: 2008, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
+//   {title: 'Lordo Rings', year: 2001, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
+//   {title: 'Frozen', year: 2012, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' },
+//   {title: 'Scoobs', year: 2020, poster: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg' }
+// ]
+
 function App() {
   
   console.log('test', process.env.OMDB_API_KEY)
 
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
+  const [nominations, setNomination] = useState([]);
+
+  const nominationHandler = function(newNom) {
+    setNomination([...nominations, newNom])
+  }
 
   useEffect(() => {
     axios.get(`http://www.omdbapi.com/?s=${term}&apikey=${process.env.OMDB_API_KEY}&type=movie`)
@@ -38,10 +51,10 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <NominationList />
+      <NominationList nominations={nominations} />
       <SearchBar onSearch={term => setTerm(term)} />
       {console.log(results)}
-      <SearchResultList results={results}></SearchResultList>
+      <SearchResultList results={results} nominationHandler={nominationHandler} nominations={nominations} ></SearchResultList>
     </div>
   );
 }

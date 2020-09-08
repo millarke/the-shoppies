@@ -2,14 +2,16 @@ import React from 'react';
 import Nomination from './Nomination'
 
 
-export default function NominationList() {
-  return(
+
+export default function NominationList(props) {
+
+  const nominations = props.nominations.map(nomination => {
+    return <Nomination nomination={nomination}></Nomination>
+  })
+  
+  return (
     <div className='nomination-container'>
-      <Nomination></Nomination>
-      <Nomination></Nomination>
-      <Nomination></Nomination>
-      <Nomination></Nomination>
-      <Nomination></Nomination>
+      {nominations}
     </div>
   )
 }

@@ -37,7 +37,7 @@ Nominating a movie adds its poster to the top of the page 🎥
 - Not giving up when the going got tough, there was a lot I didn't know that I didn't know!
 - Styling it myself without the help of a framework
 - Using debouncing
-- Even though I didn't quite finish everything that I wanted to, I'm proud of what I was able to accomplish in a day's time
+- Even though I didn't quite finish everything that I wanted to, I'm proud of what I was able to accomplish in a day's time. There was a lot of visual flair I wanted to add!
 
 ### What I Learned
 - Following a tutorial a couple weeks ago won't necessarily help when doing it from scratch on your own
@@ -53,9 +53,9 @@ Nominating a movie adds its poster to the top of the page 🎥
 - Used [OMDb API](http://www.omdbapi.com/)
 
 ### Known Issues
-- Nominate button does not disable, allowing for the same movie to be nominated more than once
 - No backend to use to hide the OMDB API key (visible in network requests when deployed, but not visible in the github repo) 
-- The nominate button is ugly and poorly placed (I know)
+- Button styling is poor, poor placement as well
+- nominations container formats poorly when wide enough
 
 ---
 

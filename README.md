@@ -1,12 +1,64 @@
 ## Hello!
 
-This app is to accompany my Winter 2021 Application for Shopify!
+This app is to accompany my Winter 2021 Application for Shopify! <br>
+Please take a look at my submission [here](https://the-shoppies-winter-2021.netlify.app)<br>
 
-Please take a look at my [submission](https://the-shoppies-winter-2021.netlify.app) :)
+[Known Issues](#known-issues)
 
 ---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Images and Screenshots
+
+### Shoppies Logo
+I hope the marketing department doesn't mind... 🍿🛍
+<div align="center">
+  <img src="public/shoppies_logo_black.png" width=60%>
+</div>
+<br>
+
+
+### Searching
+I used debouncing to limit API calls 👸
+<div align="center">
+  <img src="public/readme/search-results-low.gif" width=60%>
+</div>
+
+### Nominating
+Nominating a movie adds its poster to the top of the page 🎥
+<div align="center">
+  <img src="public/readme/nominate.gif" width=60%>
+</div>
+
+---
+### What I'm Proud of
+- Going outside of my comfort zone and working with react, something I'm still learning a lot about. I found it challenging in Bootcamp and wanted to challenge myself further.
+- The logo and the styling (given the time)
+- Deploying my first solo app, first time using netlify
+- Not giving up when the going got tough, there was a lot I didn't know that I didn't know!
+- Styling it myself without the help of a framework
+- Using debouncing
+- Even though I didn't quite finish, I'm proud of what I was able to accomplish in a day's time
+
+### What I Learned
+- Following a tutorial a couple weeks ago won't necessarily help when doing it from scratch on your own
+  - First time making a react app on my own
+  - Kicked my butt
+- It's important to consider making a back end when dealing with APIs
+  - Spent a long time trying to figure out how to hide my key
+  - Luckily for me this is just a free API key that's accessible to anybody
+- Take however long you think it will take and then double it...
+
+### Technology
+- Made with [Create React App](https://github.com/facebook/create-react-app)
+- Used [OMDb API](http://www.omdbapi.com/)
+
+### Known Issues
+- Nominate button does not disable, allowing for the same movie to be nominated more than once
+- There is no cap on nominations at the moment, user can nominate as many as they wish
+- No backend to use to hide the OMDB API key (visible in network requests when deployed, but not visible in the github repo) 
+- The nominate button is ugly and poorly placed (I know)
+
+---
 
 ## Available Scripts
 
@@ -16,61 +68,3 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
